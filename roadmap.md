@@ -88,7 +88,7 @@ De fasen hebben concrete eindvoorwaarden. Er zijn nog geen doorlooptijden of lev
 
 ## Fase 6 — Uitbreiden op basis van gebruik
 
-Mogelijke vervolgstappen: Engelse vertaling, blog/projectupdates, contactformulier, aanvullende statistiekbronnen en een afzonderlijke cv-PDF. Licht/donker is inmiddels gebouwd. Ieder nieuw onderdeel krijgt eerst een concrete behoefte, scope en acceptatiecriteria.
+Mogelijke vervolgstappen: Engelse vertaling, blog/projectupdates, aanvullende statistiekbronnen en een afzonderlijke cv-PDF. Licht/donker is gebouwd. Een compact cv en contactformulier met privé-inbox, spambeperking en beheerafhandeling zijn lokaal toegevoegd na de eerste release; de contact-migration en scheduler moeten nog op hosting worden uitgevoerd en gecontroleerd. Ieder nieuw onderdeel krijgt eerst een concrete behoefte, scope en acceptatiecriteria.
 
 ## Eerstvolgende stap
 

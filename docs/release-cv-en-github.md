@@ -1,5 +1,7 @@
 # Release: persoonlijk cv, contact en GitHub
 
+**Historische release.** Voor het nieuwe formulier en compacte cv gebruik je [de contactrelease](release-contactformulier.md). De actuele updatehulp is daarvoor aangepast en is niet bedoeld om dit oude GitHub-pakket opnieuw te installeren.
+
 [Terug naar hosting](staging-en-releases.md)
 
 Dit is de nieuwe release `20261017T220220Z`, inclusief logo, profielkaart, contactpagina, licht/donker en GitHub-repositorycijfers. Er is geen aparte werkgeverssectie. Het eerdere ZIP `20261017T213959Z` bevat niet alle wijzigingen. De release-ID is een UTC-tijdstip; in Nederland is deze release op 18 oktober 2026 gebouwd.

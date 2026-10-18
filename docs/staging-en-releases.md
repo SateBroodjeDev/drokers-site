@@ -67,15 +67,15 @@ De volgende stappen zijn een procedure, nog geen uitgevoerde hostinginstallatie.
 
 ## Updates en herstel
 
-De actuele release met GitHub-migration gebruikt [Release: persoonlijk cv, contact en GitHub](release-cv-en-github.md). Volg daarvoor de nieuwe updatehulp met afzonderlijke `prepare`, `backup`, `migrate`, `activate` en `rollback`-stappen.
+De nieuwe contactrelease gebruikt [Release: compact cv en werkend contactformulier](release-contactformulier.md). De actuele updatehulp biedt afzonderlijke `prepare`, `backup`, `migrate`, `activate` en `rollback`-stappen en accepteert uitsluitend de contact-migration boven op de eerdere GitHub-release.
 
-De eerdere [release voor persoonlijke vormgeving en licht/donker](release-persoonlijke-vormgeving.md) beschrijft het oude pakket zonder GitHub-migration. Voor de huidige werkmap geldt de hierboven genoemde nieuwe procedure. De actuele `scripts/update-hosting.sh` biedt voorbereiding, databaseback-up, de specifiek beoordeelde aanvullende migration, activering en terugzetten; serveruitvoering is nog niet bevestigd.
+De eerdere [GitHub-release](release-cv-en-github.md) en [release voor persoonlijke vormgeving en licht/donker](release-persoonlijke-vormgeving.md) zijn historische procedures. Gebruik die oude ZIP-bestanden niet voor de contactwijzigingen. Upload de bijgewerkte hulp opnieuw; de contactversie ervan is nog niet op Vimexx uitgevoerd.
 
-De huidige GitHub-uitbreiding bevat inmiddels een nieuwe migratie. Gebruik daarvoor het nieuwe pakket met de actuele hulp en behoud de bestaande configuratie/opslag. De nieuwe tabel is aanvullend; een rollback van code verwijdert die tabel niet automatisch. Een toekomstige servercron moet afzonderlijk worden gecontroleerd.
+De contacttabel is aanvullend; een rollback van code verwijdert die tabel en ontvangen berichten niet automatisch. De servercron voor GitHub-metingen en dagelijkse opschoning moet afzonderlijk worden gecontroleerd.
 
 Gebruik voor elke update een nieuwe releasemap, dezelfde stagingconfiguratie en dezelfde stagingopslag. Maak vóór migraties een herstelbare database- en mediaback-up. Controleer platformvereisten en migraties voordat een geteste `current`-koppeling wordt omgezet. Een eerdere codeversie terugzetten herstelt geen databasewijzigingen; beoordeel herstel daarom vooraf per migratie.
 
-Een back-upherstel, serverinstallatie, MySQL-validatie, GitHub CI-run en productiedeployment zijn nog open punten. Er is een lokale pakketbouwer; er is nog geen automatische deploymentworkflow of automatische terugzetprocedure.
+De eerdere productierelease is als geslaagd bevestigd door de eigenaar. Dat bewijst geen onafhankelijk gecontroleerde hostingconfiguratie of hersteltest. De nieuwe contactrelease, back-upherstel, GitHub CI-resultaten en daadwerkelijke cronuitvoering blijven te controleren. Er is een lokale pakketbouwer en een handmatige terugzetactie; er is geen automatische deploymentworkflow.
 
 ## Lokale verificatie op 17 oktober 2026
 

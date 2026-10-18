@@ -80,7 +80,7 @@ class GithubStatisticsTest extends TestCase
     {
         $profile = $this->profile();
         GithubSnapshot::create(['username' => 'exampledev', 'repositories' => 12345, 'stars' => 6789, 'synced_at' => now()->subDays(3)]);
-        $this->get('/contact')->assertOk()->assertSee('https://github.com/ExampleDev', false)->assertSee('Werkervaring & opleidingen', false);
+        $this->get('/contact')->assertOk()->assertSee('https://github.com/ExampleDev', false)->assertSee('Bekijk mijn cv');
         $this->get('/')->assertOk()->assertSee('12.345')->assertSee('ouder dan 48 uur');
         $this->profile(['github_statistics' => false]);
         $this->get('/')->assertDontSee('12.345');

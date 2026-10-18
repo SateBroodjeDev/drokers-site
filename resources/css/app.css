@@ -3,6 +3,7 @@
 @import 'tailwindcss' source(none);
 @import './midnight.css';
 @import './contact.css';
+@import './compact.css';
 
 @source '../views';
 @source '../js';

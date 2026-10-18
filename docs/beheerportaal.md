@@ -41,7 +41,15 @@ Open het bestaande record onder **Profiel & vormgeving**. Het profiel heeft vier
 3. **Kleuren & stijl:** kies Nacht of Licht, daarnaast Paddock, Graphite of Electric en eventueel eigen hexkleuren. Nacht is de standaard, ook voor bestaande profielen. Eigen achtergrond- en tekstkleuren blijven voorrang houden; maak ze leeg om de basiskleuren van Nacht of Licht te gebruiken. Hier kies je ook je beeldmerk en schakel je beweging, persoonlijke verhalen, development en organisatielogo’s op home in of uit.
 4. **Contact & footer:** voeg bewust openbare links toe en wijzig de footerteksten. Gebruik `https://` voor profielpagina’s en `mailto:naam@voorbeeld.nl` voor een openbaar e-mailadres. Je beheeradres wordt niet automatisch gepubliceerd.
 
-De vernieuwde contactpagina toont je openbare links als duidelijke contactregels met een icoon, label en optionele toelichting. Onder **Contact & footer** kun je ook de kop en introductie boven deze regels wijzigen. Zonder links verschijnt een rustige melding met een route naar je cv; er wordt geen adres of bereikbaarheid verzonnen. De profielkaart gebruikt je naam, functie, foto of beeldmerk en gepubliceerde cv-/over-mijroutes. De deelknop onthult geen contactgegevens en verschijnt alleen als JavaScript werkt.
+De contactpagina heeft een formulier voor naam, e-mailadres, onderwerp en bericht. Onder **Contact & footer** wijzig je de kop en introductie bij het formulier. Openbare links staan naast het formulier in de profielkaart. Ook zonder openbare links kunnen bezoekers een bericht sturen; je beheeradres wordt nooit automatisch getoond.
+
+### Contactberichten
+
+De nieuwe inbox **Contactberichten** toont ontvangen berichten, met een teller voor nog niet afgehandelde berichten in het menu en op het dashboard. Open een bericht en kies **Antwoorden via e-mail** om je eigen e-mailprogramma te openen. Verzenden en beantwoorden gebeuren niet automatisch via SMTP. Markeer een afgerond gesprek als afgehandeld of verwijder het bericht definitief.
+
+Berichten zijn uitsluitend voor actieve beheerders met MFA toegankelijk. Er worden geen bijlagen of IP-adressen in de berichtentabel opgeslagen. Dagelijkse opschoning verwijdert berichten ouder dan 90 dagen wanneer de Laravel-scheduler daadwerkelijk via hostingcron draait. Zonder werkende cron moet je handmatig verwijderen of `php artisan model:prune --model='App\Models\ContactMessage'` uitvoeren. Deze uitbreiding is lokaal gebouwd en vraagt de nieuwe migration `2026_10_20_000001_create_contact_messages_table` vóór activering op hosting.
+
+Het online cv toont compacte functieregels met uitklapbare werkzaamheden. Na drie rollen staat de rest onder **Eerdere ervaring**. Cursussen en trainingen zijn ook uitklapbaar. Dit verandert niets aan je opgeslagen inhoud of de volledige printversie.
 
 Onder ditzelfde tabblad staan de **GitHub-gebruikersnaam** en de schakelaar voor openbare repositorycijfers. GitHub wordt automatisch als profiel-link toegevoegd; een al aanwezige identieke link wordt niet herhaald. Na opslaan kun je met **GitHub bijwerken** een meting ophalen. Echte cijfers verschijnen pas na succes. De contactpagina behoudt gewone routes naar je achtergrond en cv, zonder een aparte werkgeverssectie. Zie [Statistieken](statistieken.md) voor definities, cron en foutafhandeling.
 

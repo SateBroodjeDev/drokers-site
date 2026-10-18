@@ -143,6 +143,14 @@ Alle hoofdinhoud staat in de eerste HTML-response. Titels en beschrijvingen volg
 
 Afbeeldingen krijgen passende formaten en breedte/hoogte. Onder de eerste schermhoogte worden ze waar passend lui geladen. Eager loading voorkomt een databasequery per project of vaardigheid. API-aanroepen naar externe statistiekbronnen vinden nooit plaats tijdens het laden van een publieke pagina.
 
+## Contactformulier en privé-inbox
+
+`POST /contact` gebruikt dezelfde profiel- en paginapublicatieregels als de publieke pagina. Validatie begrenst velden; CSRF, een honeypot en de named limiter `contact` beperken misbruik. De pagina krijgt `private, no-store` vanwege formulier- en sessiegegevens. Ook bij Cloudflare/Varnish moet `/contact` buiten paginacaching blijven.
+
+`ContactMessage` bewaart naam, e-mailadres, onderwerp, bericht en afhandelstatus in een afzonderlijke tabel. Er zijn geen publieke lees-, export- of media-endpoints voor berichten. Filament biedt lezen, antwoorden via een `mailto:`-actie, afhandelen en definitief verwijderen; actieve beheerrechten en de bestaande MFA blijven verplicht. Bezoekersinhoud wordt als tekst ge-escaped, niet als HTML gerenderd. SMTP en e-mailnotificaties zijn niet onderdeel van deze uitbreiding.
+
+De dagelijkse scheduler plant het verwijderen van berichten ouder dan 90 dagen. Dit werkt pas met een aantoonbaar uitgevoerde hostingcron; handmatig opschonen blijft mogelijk. De actuele updatehulp accepteert uitsluitend de aanvullende migration `2026_10_20_000001_create_contact_messages_table` boven op de eerdere GitHub-release; het eerder geüploade exemplaar moet worden vervangen. Zie [de releaseprocedure](release-contactformulier.md).
+
 ## Logging en foutgedrag
 
 In productie staat debugweergave uit. Een 404 toont een bruikbare terugweg; een interne fout toont geen stacktrace. Log de noodzakelijke foutcontext zonder wachtwoorden, tokens, sessiegegevens of volledige privé-API-antwoorden. Rotatie en bewaartermijn worden bij deployment ingesteld.

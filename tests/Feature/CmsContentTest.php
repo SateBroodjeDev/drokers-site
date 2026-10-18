@@ -94,7 +94,7 @@ class CmsContentTest extends TestCase
     {
         $this->admin();
         $adminEmail = auth()->user()->email;
-        $this->get('/contact')->assertOk()->assertSee('Contactgegevens volgen.')->assertDontSee($adminEmail);
+        $this->get('/contact')->assertOk()->assertSee('Verstuur bericht')->assertDontSee($adminEmail);
         Livewire::test(EditSiteProfile::class, ['record' => SiteProfile::first()->id])
             ->fillForm(['settings.contact_heading' => 'Een professionele kennismaking', 'settings.contact_intro' => 'Neem gerust contact op voor een gesprek.',
                 'settings.links' => [

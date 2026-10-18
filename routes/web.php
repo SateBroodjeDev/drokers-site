@@ -10,7 +10,10 @@ Route::get('/cv/print', [PortfolioController::class, 'printResume'])->name('cv.p
 Route::get('/projecten', [PortfolioController::class, 'projects'])->name('projects');
 Route::get('/projecten/{slug}', [PortfolioController::class, 'project'])->name('projects.show');
 Route::get('/development', [PortfolioController::class, 'page'])->defaults('pageKey', 'development')->name('development');
-Route::get('/contact', [PortfolioController::class, 'page'])->defaults('pageKey', 'contact')->name('contact');
+Route::middleware(\App\Http\Middleware\PreventContactCaching::class)->group(function (): void {
+    Route::get('/contact', [PortfolioController::class, 'page'])->defaults('pageKey', 'contact')->name('contact');
+    Route::post('/contact', [\App\Http\Controllers\ContactController::class, 'store'])->middleware('throttle:contact')->name('contact.send');
+});
 Route::get('/privacy', [PortfolioController::class, 'page'])->defaults('pageKey', 'privacy')->name('privacy');
 Route::get('/media/{uuid}', [\App\Http\Controllers\MediaController::class, 'show'])->name('media.show');
 Route::get('/sitemap.xml', [PortfolioController::class, 'sitemap'])->name('sitemap');

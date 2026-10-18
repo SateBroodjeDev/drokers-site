@@ -83,7 +83,7 @@ De vervolgfase voegt GitHub-statistieken toe. De eigenaar kiest wat zichtbaar is
 
 ## Contact, media en persoonlijke gegevens
 
-Contact verloopt in de eerste release via links. Een publiek e-mailadres is optioneel; het privé-e-mailadres van het beheeraccount wordt nooit automatisch gepubliceerd. Telefoonnummer, woonadres en geboortedatum worden niet standaard gevraagd.
+Contact verloopt via een formulier met privé-inbox in het beheerportaal, aangevuld met optionele openbare links. Het formulier vraagt naam, e-mailadres, onderwerp en bericht. Een honeypot, validatie, CSRF en limieten van drie pogingen per minuut en twintig per dag per IP beperken misbruik. De teller gebruikt een hash; IP-adressen worden niet bij het bericht bewaard. Het privé-e-mailadres van het beheeraccount wordt nooit automatisch gepubliceerd. Telefoonnummer, woonadres en geboortedatum worden niet gevraagd. Een ontvangstmelding verschijnt pas na opslag; er wordt geen e-mailbezorging beloofd. Antwoorden gebeurt vanuit het eigen e-mailprogramma van de beheerder.
 
 Afbeeldingen krijgen serverzijdige type-, grootte- en afmetingencontrole: JPEG, PNG en WebP tot 5 MB en 16 miljoen pixels. Ze worden opnieuw opgebouwd als WebP tot 2400 pixels aan de langste zijde. SVG en uitvoerbare bestanden worden niet toegestaan. Persoonlijke scans van diploma's zijn geen vereiste en worden niet standaard openbaar gemaakt.
 

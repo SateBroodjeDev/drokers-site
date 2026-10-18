@@ -4,7 +4,7 @@ A personal website that goes beyond a résumé: experience, education, projects,
 
 🌐 **[Visit the website](https://domenicrokers.nl)** · 🇳🇱 **[Nederlandse documentatie](README.md)** · 📚 **[Development guide, Dutch](docs/ontwikkelen.md)**
 
-> **Status · 18 October 2026:** the owner confirmed that the release with the updated design and GitHub integration succeeded. Local validation passed 49 tests with 436 assertions and the frontend build. GitHub Actions is configured; this does not establish a successful CI run, restore test or hosting cron run.
+> **Status · 18 October 2026:** the owner confirmed that the release with the updated design and GitHub integration succeeded. Local validation passed 56 tests with 493 assertions and the frontend build. GitHub Actions is configured; this does not establish a successful CI run, restore test or hosting cron run.
 
 ## ✨ Features
 
@@ -17,7 +17,7 @@ A personal website that goes beyond a résumé: experience, education, projects,
 | 📊 Statistics | Manual figures with sources and dates, internal counts and stored GitHub measurements |
 | 🐙 GitHub integration | Profile link, public owned repositories and stars received, with source and measurement time |
 | 🌗 Light & dark | Editable default appearance and a visitor toggle with a locally remembered preference |
-| ✉️ Contact | Explicitly selected public contact and profile links |
+| ✉️ Contact | Contact form with a private portal inbox and optional public links |
 | 🔎 Discoverability | Metadata and a sitemap that follow publication rules |
 
 The site is an extended personal résumé for anyone curious about my background and projects. There is no separate employer section. The public interface currently uses Dutch; the repository documentation is available in Dutch and English.
@@ -88,7 +88,8 @@ Deployment is manual over SSH. The helper targets the documented release directo
 - GitHub commits, a real contribution calendar and language breakdown are not integrated. Any demonstration calendar is labelled as a demo.
 - The scheduler defines a six-hour sync interval. Automatic execution requires a configured and verified hosting cron job.
 - API failures do not produce fabricated numbers; a previous successful measurement can be retained.
-- A blog, contact form, visitor accounts and server-generated PDFs are not implemented.
+- A blog, visitor accounts and server-generated PDFs are not implemented.
+- A compact résumé and contact form with a private inbox were added locally after the confirmed release. Hosting requires the new contact-message migration first. Email notifications are not configured; replies use the administrator’s own email client.
 - The application is designed for one owner, without public registration.
 
 ## 📚 Documentation
@@ -105,6 +106,7 @@ Most detailed project documentation is currently in Dutch.
 | [Company logos](docs/bedrijfslogos.md) | Asset sources and display |
 | [Roadmap](roadmap.md) | Delivery stages and open items |
 | [Personal GitHub README](docs/github-profiel.md) | Publishing instructions for the separately maintained profile text |
+| [Compact résumé & contact form](docs/compact-cv-en-contact.md) | Local update, private inbox and required migration |
 | [Safe publishing](docs/veilig-publiceren.md) | Bilingual publication checklist and limitations |
 
 ## 🔒 Privacy & usage rights

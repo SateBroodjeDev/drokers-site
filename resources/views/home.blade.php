@@ -68,7 +68,7 @@
 
     @if($site['show_development'] && $pages->has('page:development'))
         <x-github-statistics />
-        <section class="container person-development"><x-site-icon name="code" /><div><h2>{{ $pages->get('page:development')->title }}</h2><p>{{ $pages->get('page:development')->summary }}</p></div><a class="text-link" href="{{ route('development') }}">Neem een kijkje <x-site-icon name="arrow-right" /></a></section>
+        <section class="container person-development"><x-site-icon name="code" /><div><h2>{{ $pages->get('page:development')->title }}</h2></div><a class="text-link" href="{{ route('development') }}">Code & statistieken <x-site-icon name="arrow-right" /></a></section>
     @endif
     @if(!empty($page->data['sections']))<section class="section container prose-page">@foreach($page->data['sections'] as $section)<section><h2>{{ $section['title'] ?? '' }}</h2><p>{{ $section['body'] ?? '' }}</p></section>@endforeach</section>@endif
 </x-site-layout>

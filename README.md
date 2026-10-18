@@ -4,7 +4,7 @@ Een persoonlijke website die verder gaat dan een cv: werkervaring, opleidingen, 
 
 🌐 **[Bekijk de website](https://domenicrokers.nl)** · 🇬🇧 **[English documentation](README.en.md)** · 📚 **[Ontwikkelhandleiding](docs/ontwikkelen.md)**
 
-> **Status · 18 oktober 2026:** de eigenaar heeft de release met de vernieuwde vormgeving en GitHub-koppeling als geslaagd bevestigd. Lokaal slaagden 49 tests met 436 assertions en de frontendbuild. GitHub Actions is geconfigureerd; een geslaagde CI-run, hersteltest en hostingcron zijn hiermee niet aangetoond.
+> **Status · 18 oktober 2026:** de eigenaar heeft de release met de vernieuwde vormgeving en GitHub-koppeling als geslaagd bevestigd. Lokaal slaagden 56 tests met 493 assertions en de frontendbuild. GitHub Actions is geconfigureerd; een geslaagde CI-run, hersteltest en hostingcron zijn hiermee niet aangetoond.
 
 ## ✨ Wat kan de website?
 
@@ -17,7 +17,7 @@ Een persoonlijke website die verder gaat dan een cv: werkervaring, opleidingen, 
 | 📊 Statistieken | Handmatige cijfers met bron en peildatum, interne tellingen en opgeslagen GitHub-metingen |
 | 🐙 GitHub | Profielkoppeling, openbare eigen repositories en ontvangen sterren; met bron en meetmoment |
 | 🌗 Licht & donker | Beheerbare standaardweergave en een schakelaar die de bezoekerskeuze lokaal onthoudt |
-| ✉️ Contact | Zelf gekozen openbare contact- en profiellinks |
+| ✉️ Contact | Formulier met privé-inbox in het portaal en optionele openbare links |
 | 🔎 Vindbaarheid | Metadata en sitemap op basis van gepubliceerde inhoud |
 
 De website is een uitgebreid persoonlijk cv voor iedereen die wil weten wie ik ben en wat ik doe. Er is geen aparte werkgeverssectie. De publieke interface is momenteel Nederlands; deze repository heeft documentatie in twee talen.
@@ -88,7 +88,8 @@ De deployment is handmatig via SSH. De updatehulp is bedoeld voor de gedocumente
 - GitHub-commits, een echte bijdragekalender en taalverdeling zijn nog niet gekoppeld. Een eventuele demokalender wordt als demo aangeduid.
 - De scheduler bevat een synchronisatie iedere zes uur; uitvoering vereist een correct ingestelde en gecontroleerde hostingcron.
 - GitHub-fouten leveren geen verzonnen cijfers op; een eerdere meting kan behouden blijven.
-- Een blog, contactformulier, bezoekersaccounts en automatische PDF-generatie op de server zijn niet gebouwd.
+- Een blog, bezoekersaccounts en automatische PDF-generatie op de server zijn niet gebouwd.
+- Compact cv en contactformulier met portaalinbox zijn lokaal toegevoegd na de bevestigde release. Hosting vereist eerst de nieuwe contactberichten-migration. E-mailnotificaties zijn niet ingericht; antwoorden kan via je eigen e-mailprogramma.
 - De applicatie gaat uit van één eigenaar, zonder openbare registratie.
 
 ## 📚 Meer lezen
@@ -103,6 +104,7 @@ De deployment is handmatig via SSH. De updatehulp is bedoeld voor de gedocumente
 | [Bedrijfslogo’s](docs/bedrijfslogos.md) | Beeldbronnen en weergave |
 | [Roadmap](roadmap.md) | Bouwfasen en open punten |
 | [Persoonlijke GitHub-README](docs/github-profiel.md) | Plaatsingsinstructies voor de afzonderlijk bewaarde profieltekst |
+| [Compact cv & contactformulier](docs/compact-cv-en-contact.md) | Nieuwe lokale wijziging, inbox en benodigde migration |
 | [Veilig publiceren / Safe publishing](docs/veilig-publiceren.md) | Repositorycontrole, private bestanden en beperkingen |
 
 ## 🔒 Privacy & gebruiksrechten

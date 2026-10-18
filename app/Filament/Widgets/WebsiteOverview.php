@@ -28,8 +28,10 @@ class WebsiteOverview extends Widget
             ['Organisaties & logo’s', 'Koppel een bedrijfslogo aan functies en opleidingen.', OrganizationResource::getUrl()],
             ['Projecten', 'Werk je projecten bij en kies je eigen afbeeldingen.', ProjectResource::getUrl()],
             ['Afbeeldingen', 'Upload je foto’s, logo’s en projectbeelden.', MediaAssetResource::getUrl()],
+            ['Contactberichten', 'Lees vragen van bezoekers en antwoord via je eigen e-mailprogramma.', \App\Filament\Resources\ContactMessageResource::getUrl()],
         ], 'counts' => [
             'Gepubliceerde projecten' => Project::published()->count(),
+            'Nieuwe contactberichten' => \App\Models\ContactMessage::whereNull('handled_at')->count(),
             'Cv-onderdelen & pagina’s' => ContentRecord::count(),
             'Organisaties' => Organization::count(),
             'Concepten' => ContentRecord::where('status', 'draft')->count() + Project::where('status', 'draft')->count(),

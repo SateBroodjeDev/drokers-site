@@ -35,7 +35,7 @@ De homepage geeft het overzicht. Het cv biedt de tijdlijn en feiten. Projectpagi
 | Cv | Werkervaring, opleidingen, diploma's/certificaten en vaardigheden |
 | Projecten | Overzicht, detailpagina's, status, eigen rol, technieken, afbeeldingen en externe links |
 | Development | Handmatig beheerde cijfers en tellingen uit gepubliceerde projectgegevens |
-| Contact | Een door de eigenaar gekozen e-mailadres en/of externe profiel-links |
+| Contact | Formulier met privé-inbox, aangevuld met expliciet gekozen openbare links |
 | Beheer | Eén beheerder, tweefactorauthenticatie, inhoudsbeheer, publicatie en mediabeheer |
 | Vindbaarheid | Paginatitels, beschrijvingen, deelafbeeldingen, sitemap en canonieke URL's |
 | Cv meenemen | Printweergave; opslaan als PDF via de browser |
@@ -46,7 +46,7 @@ De homepage geeft het overzicht. Het cv biedt de tijdlijn en feiten. Projectpagi
 - Automatische GitHub-statistieken en een activiteitskalender.
 - Een Nederlandstalige en Engelstalige versie, na een expliciete vertaalkeuze.
 - Een blog of korte projectupdates als er voldoende inhoud voor is.
-- Een contactformulier met berichtafhandeling en spambeperking.
+- E-mailnotificaties voor contactberichten, als een werkende mailvoorziening wordt ingericht. Formulier en privé-inbox zijn lokaal gebouwd.
 - WakaTime of een andere bron van programmeertijd, als de eigenaar deze gebruikt en wil delen.
 - Een automatisch gegenereerde, afzonderlijk vormgegeven cv-PDF.
 - Privacybewuste bezoekersstatistieken als daar behoefte aan ontstaat.

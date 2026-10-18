@@ -1,5 +1,7 @@
 # Release: persoonlijke vormgeving en licht/donker
 
+**Historisch document.** De meest recente procedure staat bij [de contactrelease](release-contactformulier.md). De huidige updatehulp hoort bij die nieuwe release.
+
 **Let op: dit document beschrijft het eerdere pakket `20261017T213959Z`.** De huidige werkmap bevat daarna logo-, profielkaart- en contactwijzigingen plus een GitHub-koppeling met nieuwe migration `2026_10_19_000001_create_github_snapshots_table`. Die staan niet in dit oude ZIP. Gebruik voor alle huidige wijzigingen de nieuwe [releaseprocedure voor cv, contact en GitHub](release-cv-en-github.md), inclusief de bijgewerkte hulp met back-up- en migratiestappen.
 
 [Terug naar de releasehandleiding](staging-en-releases.md)

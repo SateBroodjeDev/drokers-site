@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Run on Vimexx over SSH. Keep configuration and data; only the reviewed additive GitHub migration is allowed.
+# Run on Vimexx over SSH, after the GitHub release. Only the reviewed additive contact migration is allowed.
 set -Eeuo pipefail
 umask 077
 
@@ -18,7 +18,7 @@ webroot="$domain/public_html"
 release="$releases/$release_id"
 state="$project/deploy-state/$release_id"
 php='/opt/alt/php83/usr/bin/php'
-github_migration='2026_10_19_000001_create_github_snapshots_table.php'
+reviewed_migration='2026_10_20_000001_create_contact_messages_table.php'
 
 for program in readlink flock sha256sum unzip diff cmp mv ln find cp; do command -v "$program" >/dev/null || fail "Ontbrekend commando: $program"; done
 [[ -x "$php" ]] || fail 'De verwachte PHP-runtime ontbreekt.'
@@ -82,7 +82,7 @@ if [[ "$mode" == prepare ]]; then
     done
     for migration in "$release"/database/migrations/*.php; do
         migration_name="$(basename "$migration")"
-        [[ -f "$previous/database/migrations/$migration_name" || "$migration_name" == "$github_migration" ]] || fail 'Onverwachte nieuwe migratie; stop voor beoordeling.'
+        [[ -f "$previous/database/migrations/$migration_name" || "$migration_name" == "$reviewed_migration" ]] || fail 'Onverwachte nieuwe migratie; deze hulp werkt de eerdere GitHub-release bij naar de contactrelease.'
     done
 
     # Keep the freshly unpacked empty tree, then use the existing persistent data.
@@ -141,9 +141,9 @@ if [[ "$mode" == backup || "$mode" == migrate ]]; then
     else
         [[ -f "$state/database-backup" && -s "$backup_file" && -f "$backup_file.sha256" ]] || fail 'Maak eerst de databaseback-up met de backup-stap.'
         sha256sum -c -- "$backup_file.sha256"
-        [[ -f "$release/database/migrations/$github_migration" ]] || fail 'De beoordeelde GitHub-migratie ontbreekt.'
-        "$php" artisan migrate --path="database/migrations/$github_migration" --force --no-ansi
-        "$php" -r 'require "vendor/autoload.php"; $app = require "bootstrap/app.php"; $app->make(Illuminate\Contracts\Console\Kernel::class)->bootstrap(); if (!Illuminate\Support\Facades\Schema::hasTable("github_snapshots")) exit(1);'
+        [[ -f "$release/database/migrations/$reviewed_migration" ]] || fail 'De beoordeelde contact-migratie ontbreekt.'
+        "$php" artisan migrate --path="database/migrations/$reviewed_migration" --force --no-ansi
+        "$php" -r 'require "vendor/autoload.php"; $app = require "bootstrap/app.php"; $app->make(Illuminate\Contracts\Console\Kernel::class)->bootstrap(); if (!Illuminate\Support\Facades\Schema::hasTable("contact_messages")) exit(1);'
         touch -- "$state/migration-ready"
         printf 'MIGRATIE GEREED. De actieve website is nog niet omgeschakeld.\n'
     fi
@@ -151,7 +151,7 @@ if [[ "$mode" == backup || "$mode" == migrate ]]; then
 fi
 
 if [[ "$mode" == activate ]]; then
-    if [[ -f "$release/database/migrations/$github_migration" ]]; then
+    if [[ -f "$release/database/migrations/$reviewed_migration" ]]; then
         [[ -f "$state/migration-ready" ]] || fail 'Voer eerst backup en migrate uit.'
     fi
     [[ "$current_public" == "$previous_public" ]] || fail 'De actieve versie is inmiddels gewijzigd; niet overschrijven.'
