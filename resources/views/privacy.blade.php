@@ -1,0 +1,1 @@
+<x-site-layout :footer-cta="false"><x-page-heading /><article class="container prose-page">@foreach($page->data['sections'] ?? [] as $section)<section><h2>{{ $section['title'] ?? '' }}</h2><p>{{ $section['body'] ?? '' }}</p></section>@endforeach</article></x-site-layout>

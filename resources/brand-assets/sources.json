@@ -1,0 +1,79 @@
+[
+  {
+    "key": "ns",
+    "name": "NS",
+    "source_page": "https://www.ns.nl/",
+    "original_url": "https://www.ns.nl/fe-platform-static/nsdesign/4526782/images/nslogo.svg",
+    "checked_on": "2026-10-17",
+    "filename": "organizations/ns.webp",
+    "preparation": "SVG gerasteriseerd, kleuren en vormen behouden.",
+    "encoding": "WebP, maximaal 640 pixels aan de langste zijde",
+    "sha256": "2f3059690fd0f6b30c556b0c76e9810d8329f7be39f6082ccca0535c736199cd"
+  },
+  {
+    "key": "qarin",
+    "name": "Qarin",
+    "source_page": "https://qarin.nl/pers/",
+    "original_url": "https://qarin.nl/wp-content/uploads/2024/02/Qarin_logo_vernieuwers_van_vervoer-2.png",
+    "checked_on": "2026-10-17",
+    "filename": "organizations/qarin.webp",
+    "preparation": "Compleet logo met icoon, woordmerk en tagline behouden.",
+    "encoding": "WebP, maximaal 640 pixels aan de langste zijde",
+    "sha256": "419692c72a797d7fbcfb0c709c7f1072b3e19ce79dda5d8f0d75e92b17849823"
+  },
+  {
+    "key": "tsc",
+    "name": "TSC Crowd Management",
+    "source_page": "https://www.tsc.nl/",
+    "original_url": "https://www.tsc.nl/logo.png",
+    "checked_on": "2026-10-17",
+    "filename": "organizations/tsc.webp",
+    "preparation": "Transparantie en kleuren behouden.",
+    "encoding": "WebP, maximaal 640 pixels aan de langste zijde",
+    "sha256": "52479141023516e63f1d197cc6ad091aba7c77625d98ea16af5d3af0052d6019"
+  },
+  {
+    "key": "efteling",
+    "name": "Efteling",
+    "source_page": "https://www.efteling.com/nl",
+    "original_url": "https://edge.sitecorecloud.io/eftelingbv1-website-production-98e3/media/project/efteling/efteling/images/park/general/logo/3508x2480-efteling-logo.png?h=2480&iar=0&w=3508",
+    "checked_on": "2026-10-17",
+    "filename": "organizations/efteling.webp",
+    "preparation": "Transparante buitenmarges verkleind, ruimte rondom en volledig logo behouden.",
+    "encoding": "WebP, maximaal 640 pixels aan de langste zijde",
+    "sha256": "728666ce59e5e359875066e4e1e429cc089f7dc24ecdae4d610ce1d7c3966a37"
+  },
+  {
+    "key": "svpb",
+    "name": "SVPB",
+    "source_page": "https://www.svpb.nl/",
+    "original_url": "https://www.svpb.nl/wp-content/uploads/2023/08/logo.svg",
+    "checked_on": "2026-10-17",
+    "filename": "organizations/svpb.webp",
+    "preparation": "Vierkante SVG-variant gerasteriseerd, kleuren en vormen behouden.",
+    "encoding": "WebP, maximaal 640 pixels aan de langste zijde",
+    "sha256": "7e4909a1af071a0ef82724fa6e26ba8322f14604c94e83e22fcff64560c0b840"
+  },
+  {
+    "key": "profi-sec",
+    "name": "PROFI-SEC",
+    "source_page": "https://profi-sec.nl/",
+    "original_url": "https://profi-sec.nl/wp-content/uploads/Logo.webp",
+    "checked_on": "2026-10-17",
+    "filename": "organizations/profi-sec.webp",
+    "preparation": "Wit woordmerk behouden; donkere logodrager ingesteld.",
+    "encoding": "WebP, maximaal 640 pixels aan de langste zijde",
+    "sha256": "6aabf7ab32f2cd5a6c8ea4fc3bddcfa9174d2ef1fe7fa738a39cde685a127372"
+  },
+  {
+    "key": "railcenter",
+    "name": "Railcenter",
+    "source_page": "https://www.railcenter.nl/",
+    "original_url": "https://www.railcenter.nl/wp-content/uploads/2016/05/Railcenter-logo-center-wit-2.png",
+    "checked_on": "2026-10-17",
+    "filename": "organizations/railcenter.webp",
+    "preparation": "Witte onderdelen behouden; donkere logodrager ingesteld.",
+    "encoding": "WebP, maximaal 640 pixels aan de langste zijde",
+    "sha256": "6fca37b2d9958e5aa19fbb5d099d7b8f54ed4b301ddfbf473799cca3b700f537"
+  }
+]
